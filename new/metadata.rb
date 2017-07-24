@@ -4,7 +4,7 @@ maintainer_email 'you@example.com'
 license 'all_rights'
 description 'Installs/Configures new'
 long_description 'Installs/Configures new'
-version '0.1.0'
+version '0.1.1'
 depends 'wordpress', '3.0.0'
 # depends 'wordpress'
 
