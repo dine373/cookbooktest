@@ -48,7 +48,7 @@ end
 
 execute 'change first install root password' do
   command '/usr/bin/mysqladmin -u root password \'' + \
-    node['mariadb']['server_root_password'] + '\''
+          node['mariadb']['server_root_password'] + '\''
   action :nothing
   sensitive true
   not_if { node['mariadb']['server_root_password'].empty? }

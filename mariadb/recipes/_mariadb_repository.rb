@@ -18,7 +18,7 @@
 #
 
 if use_scl_package?(node['mariadb']['install']['prefer_scl_package'],
-                     node['platform'], node['platform_version']) &&
+                    node['platform'], node['platform_version']) &&
    scl_version_available?(node['mariadb']['install']['version'])
   # SCL repository
   include_recipe 'yum-scl'

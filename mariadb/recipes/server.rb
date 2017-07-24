@@ -65,7 +65,7 @@ include_recipe "#{cookbook_name}::config"
 
 # move the datadir if needed
 if node['mariadb']['mysqld']['datadir'] !=
-    node['mariadb']['mysqld']['default_datadir']
+   node['mariadb']['mysqld']['default_datadir']
 
   bash 'move-datadir' do
     user 'root'
@@ -136,7 +136,7 @@ if  node['mariadb']['allow_root_pass_change'] ||
     node['mariadb']['remove_test_database']
   execute 'install-grants' do
     command '/bin/bash -e /etc/mariadb_grants \'' + \
-      node['mariadb']['server_root_password'] + '\''
+            node['mariadb']['server_root_password'] + '\''
     only_if { File.exist?('/etc/mariadb_grants') }
     sensitive true
     action :nothing
